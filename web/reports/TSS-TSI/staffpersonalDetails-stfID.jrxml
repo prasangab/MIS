@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="staffpersonalDetails-stfID" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="80"/>
+	<parameter name="StaffID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     staff.`Staff_ID` AS staff_Staff_ID,
+     staff.`IS_Academic_Staff` AS staff_IS_Academic_Staff,
+     staff.`Registration_Date` AS staff_Registration_Date,
+     staff.`Status` AS staff_Status,
+     staff.`FullName` AS staff_FullName,
+     staff.`inisials` AS staff_inisials,
+     staff.`BirthDay` AS staff_BirthDay,
+     staff.`Race` AS staff_Race,
+     staff.`Religion` AS staff_Religion,
+     staff.`NIC_Number` AS staff_NIC_Number,
+     staff.`Address` AS staff_Address,
+     staff.`LP_Number` AS staff_LP_Number,
+     staff.`MP_Number1` AS staff_MP_Number1,
+     staff.`MP_Number2` AS staff_MP_Number2,
+     staff.`Fax` AS staff_Fax,
+     staff.`Email` AS staff_Email,
+     staff.`Occupation` AS staff_Occupation,
+     staff.`officephone` AS staff_officephone,
+     staff.`officeaddress` AS staff_officeaddress,
+     staff.`ol` AS staff_ol,
+     staff.`al` AS staff_al,
+     staff.`graduate` AS staff_graduate,
+     staff.`pg` AS staff_pg,
+     staff.`hnd` AS staff_hnd,
+     staff.`dr` AS staff_dr,
+     staff.`awasana` AS staff_awasana,
+     staff.`darmacharya` AS staff_darmacharya,
+     staff.`other` AS staff_other,
+     staff.`proffesional` AS staff_proffesional,
+     staff.`IsStudent` AS staff_IsStudent,
+     staff.`Stu_ID` AS staff_Stu_ID,
+     staff.`IS_TSS` AS staff_IS_TSS,
+     staff.`TSSID` AS staff_TSSID,
+     staff.`IsTT` AS staff_IsTT
+FROM
+     `staff` staff
+where
+staff.`Staff_ID`=$P{StaffID}]]>
+	</queryString>
+	<field name="staff_Staff_ID" class="java.lang.String"/>
+	<field name="staff_IS_Academic_Staff" class="java.lang.String"/>
+	<field name="staff_Registration_Date" class="java.sql.Date"/>
+	<field name="staff_Status" class="java.lang.String"/>
+	<field name="staff_FullName" class="java.lang.String"/>
+	<field name="staff_inisials" class="java.lang.String"/>
+	<field name="staff_BirthDay" class="java.sql.Date"/>
+	<field name="staff_Race" class="java.lang.String"/>
+	<field name="staff_Religion" class="java.lang.String"/>
+	<field name="staff_NIC_Number" class="java.lang.String"/>
+	<field name="staff_Address" class="java.lang.String"/>
+	<field name="staff_LP_Number" class="java.lang.String"/>
+	<field name="staff_MP_Number1" class="java.lang.String"/>
+	<field name="staff_MP_Number2" class="java.lang.String"/>
+	<field name="staff_Fax" class="java.lang.String"/>
+	<field name="staff_Email" class="java.lang.String"/>
+	<field name="staff_Occupation" class="java.lang.String"/>
+	<field name="staff_officephone" class="java.lang.String"/>
+	<field name="staff_officeaddress" class="java.lang.String"/>
+	<field name="staff_ol" class="java.lang.String"/>
+	<field name="staff_al" class="java.lang.String"/>
+	<field name="staff_graduate" class="java.lang.String"/>
+	<field name="staff_pg" class="java.lang.String"/>
+	<field name="staff_hnd" class="java.lang.String"/>
+	<field name="staff_dr" class="java.lang.String"/>
+	<field name="staff_awasana" class="java.lang.String"/>
+	<field name="staff_darmacharya" class="java.lang.String"/>
+	<field name="staff_other" class="java.lang.String"/>
+	<field name="staff_proffesional" class="java.lang.String"/>
+	<field name="staff_IsStudent" class="java.lang.String"/>
+	<field name="staff_Stu_ID" class="java.lang.String"/>
+	<field name="staff_IS_TSS" class="java.lang.String"/>
+	<field name="staff_TSSID" class="java.lang.String"/>
+	<field name="staff_IsTT" class="java.lang.String"/>
+	<group name="staff_Staff_ID">
+		<groupExpression><![CDATA[$F{staff_Staff_ID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-19" width="595" height="98" backcolor="#006699"/>
+				<staticText>
+					<reportElement x="20" y="20" width="264" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Staff Behavior]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="307" splitType="Stretch">
+			<textField>
+				<reportElement x="264" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Staff_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_inisials}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="80" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_BirthDay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="100" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="120" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Race}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="140" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Religion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="160" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_NIC_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="180" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="200" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_LP_Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="220" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_MP_Number1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="240" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Fax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="260" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_FullName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Staff ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="20" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="40" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Initials]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="60" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registration Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="80" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birthday]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="100" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="120" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Race]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="140" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Religion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="160" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="180" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="200" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Land Phone no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="220" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="240" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fax no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="260" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="264" y="60" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{staff_Registration_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="555" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="1" splitType="Stretch"/>
+	</summary>
+</jasperReport>

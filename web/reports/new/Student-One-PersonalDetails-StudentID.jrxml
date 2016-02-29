@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Student-One-PersonalDetails-StudentID" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="studentID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     student.`Stu_ID` AS student_Stu_ID,
+     student.`RegDate` AS student_RegDate,
+     student.`FulName` AS student_FulName,
+     student.`InitialName` AS student_InitialName,
+     student.`Raise` AS student_Raise,
+     student.`Religen` AS student_Religen,
+     student.`NIC` AS student_NIC,
+     student.`address` AS student_address,
+     student.`LandPhone` AS student_LandPhone,
+     student.`Mobile1` AS student_Mobile1,
+     student.`Mobile2` AS student_Mobile2,
+     student.`Fax` AS student_Fax,
+     student.`CurrentSchool` AS student_CurrentSchool,
+     student.`SLM` AS student_SLM,
+     student.`DPLM` AS student_DPLM,
+     student.`BithDay` AS student_BithDay,
+     student.`Email` AS student_Email,
+     student.`TssId` AS student_TssId,
+     student.`TssReg` AS student_TssReg
+FROM
+     `student` student
+where
+student.`Stu_ID`=$P{studentID}]]>
+	</queryString>
+	<field name="student_Stu_ID" class="java.lang.String"/>
+	<field name="student_RegDate" class="java.sql.Date"/>
+	<field name="student_FulName" class="java.lang.String"/>
+	<field name="student_InitialName" class="java.lang.String"/>
+	<field name="student_Raise" class="java.lang.String"/>
+	<field name="student_Religen" class="java.lang.String"/>
+	<field name="student_NIC" class="java.lang.String"/>
+	<field name="student_address" class="java.lang.String"/>
+	<field name="student_LandPhone" class="java.lang.String"/>
+	<field name="student_Mobile1" class="java.lang.String"/>
+	<field name="student_Mobile2" class="java.lang.String"/>
+	<field name="student_Fax" class="java.lang.String"/>
+	<field name="student_CurrentSchool" class="java.lang.String"/>
+	<field name="student_SLM" class="java.lang.String"/>
+	<field name="student_DPLM" class="java.lang.String"/>
+	<field name="student_BithDay" class="java.sql.Date"/>
+	<field name="student_Email" class="java.lang.String"/>
+	<field name="student_TssId" class="java.lang.String"/>
+	<field name="student_TssReg" class="java.sql.Date"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="141">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement x="136" y="20" width="290" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Student Details]]></text>
+				</staticText>
+			</frame>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="120" width="154" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Stu_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="120" width="201" height="21" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="107" width="567" height="1" forecolor="#666666"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="0" width="202" height="22" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student InitialName]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="0" width="154" height="22"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_InitialName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="96">
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="0" width="202" height="22" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student FullName]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="0" width="154" height="22"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_FulName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="37" width="202" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Mobile1]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="37" width="154" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Mobile1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="74" width="202" height="22" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Mobile2]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="74" width="154" height="22"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Mobile2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="604">
+			<textField>
+				<reportElement mode="Opaque" x="6" y="564" width="488" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="494" y="564" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="6" y="564" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="5" y="533" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="15" width="202" height="27" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Fax]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="16" width="154" height="27"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Fax}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="58" width="202" height="21" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student CurrentSchool]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="58" width="175" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_CurrentSchool}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="98" width="202" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student BirthDay]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="98" width="165" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_BithDay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="133" width="202" height="24" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Religion]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="133" width="165" height="24"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Religen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="173" width="202" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student Raise]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="173" width="165" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Raise}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="210" width="202" height="23" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Address]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="210" width="165" height="23"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="252" width="202" height="19" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student LandPhone]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="216" y="252" width="165" height="19"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_LandPhone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="287" width="202" height="21" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student SLM]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="287" width="168" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_SLM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="325" width="202" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student DPLM]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="325" width="168" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_DPLM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="5" y="358" width="202" height="18" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student E-mail]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="358" width="234" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_Email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="390" width="201" height="19" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student TSS ID]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="390" width="168" height="19"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_TssId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="423" width="201" height="18" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Registration Date]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="423" width="168" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_RegDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="457" width="201" height="18" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student NIC]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="457" width="168" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_NIC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="6" y="490" width="201" height="21" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student TSS Registration]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="213" y="490" width="168" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_TssReg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

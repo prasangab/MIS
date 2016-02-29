@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentDetailSheet" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="stuID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     student.`Stu_ID` AS student_Stu_ID,
+     student.`RegDate` AS student_RegDate,
+     student.`FulName` AS student_FulName,
+     student.`InitialName` AS student_InitialName,
+     student.`Raise` AS student_Raise,
+     student.`Religen` AS student_Religen,
+     student.`NIC` AS student_NIC,
+     student.`address` AS student_address,
+     student.`LandPhone` AS student_LandPhone,
+     student.`Mobile1` AS student_Mobile1,
+     student.`Mobile2` AS student_Mobile2,
+     student.`Fax` AS student_Fax,
+     student.`CurrentSchool` AS student_CurrentSchool,
+     student.`SLM` AS student_SLM,
+     student.`DPLM` AS student_DPLM,
+     student.`Email` AS student_Email,
+     student.`BithDay` AS student_BithDay,
+     student.`TssReg` AS student_TssReg,
+     student.`TssId` AS student_TssId
+FROM
+     `student` student
+where
+ student.`Stu_ID`=$P{stuID}]]>
+	</queryString>
+	<field name="student_Stu_ID" class="java.lang.String"/>
+	<field name="student_RegDate" class="java.sql.Date"/>
+	<field name="student_FulName" class="java.lang.String"/>
+	<field name="student_InitialName" class="java.lang.String"/>
+	<field name="student_Raise" class="java.lang.String"/>
+	<field name="student_Religen" class="java.lang.String"/>
+	<field name="student_NIC" class="java.lang.String"/>
+	<field name="student_address" class="java.lang.String"/>
+	<field name="student_LandPhone" class="java.lang.String"/>
+	<field name="student_Mobile1" class="java.lang.String"/>
+	<field name="student_Mobile2" class="java.lang.String"/>
+	<field name="student_Fax" class="java.lang.String"/>
+	<field name="student_CurrentSchool" class="java.lang.String"/>
+	<field name="student_SLM" class="java.lang.String"/>
+	<field name="student_DPLM" class="java.lang.String"/>
+	<field name="student_Email" class="java.lang.String"/>
+	<field name="student_BithDay" class="java.sql.Date"/>
+	<field name="student_TssReg" class="java.sql.Date"/>
+	<field name="student_TssId" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
